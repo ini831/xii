@@ -76,6 +76,19 @@
         }
         .content-right {
             background: #151515;
+            /* 白衣国风美女背景图配置 */
+            background-image: url('https://picsum.photos/id/64/1200/1600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 增加蒙版，提升文字/页面层次感 */
+            position: relative;
+        }
+        .content-right::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(21, 21, 21, 0.35);
         }
         /* 移动端 */
         @media (max-width: 768px) {
@@ -87,6 +100,9 @@
             }
             .menu {
                 display: none;
+            }
+            .content-right {
+                min-height: 400px;
             }
         }
     </style>
