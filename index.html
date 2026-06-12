@@ -12,16 +12,17 @@
             font-family: 'Segoe UI', sans-serif;
         }
         body {
-            background: #0a0a0a;
+            /* 统一纯黑背景，和图片完全一致 */
+            background: #000000;
             color: #ffffff;
         }
-        /* 导航 - 已去掉底部分割线 */
+        /* 导航 - 已去掉底部分割线，背景统一纯黑 */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.8rem 6%;
-            /* 删除了分割线 border-bottom */
+            background: #000000;
         }
         .brand {
             font-size: 2rem;
@@ -49,6 +50,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            background: #000000;
         }
         .tag {
             color: #ff3e6c;
@@ -75,10 +77,11 @@
             color: #fff;
             text-decoration: none;
             border-radius: 2px;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
         }
         .action-btn:hover {
             opacity: 0.9;
+            transform: translateY(-2px);
         }
         .content-right {
             background: #000000;
@@ -88,12 +91,9 @@
             background-repeat: no-repeat;
             position: relative;
         }
-        /* 背景纯黑，几乎不需要蒙版，人物更通透 */
+        /* 背景已统一纯黑，去掉多余蒙版，人物完全通透 */
         .content-right::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.05);
+            display: none;
         }
         /* 移动端 */
         @media (max-width: 768px) {
